@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html lang="en-us">
-    <header>
-        <title></title>
-    </header>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register</title>
     <link rel="stylesheet" href="style00.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
     <section>
-    <body>
         <div class="box active" id="login">
-            <form action="">
+            <form action="#">
                 <h1>Login</h1>
                 <div class="input-box">
                     <span class="icon">
@@ -16,26 +20,26 @@
                     <input type="email" required>
                     <label>Email</label>
                 </div>
-                  <div class="input-box">
+                <div class="input-box">
                     <span class="icon">
                         <ion-icon name="lock-closed"></ion-icon>
                     </span>
                     <input type="password" required>
                     <label>Password</label>
                 </div>
-                <div class="remeber-forget">
+                <div class="remember-forget">
                     <label><input type="checkbox">Remember me</label>
                     <a href="#">Forgot password?</a>
                 </div>
                 <button type="submit">Login</button>
-                <div class="register-link"><p>
-                    Don't have an Account? <a href="#" onclick="showForm('register')">Register</a>
-                </p></div>
+                <div class="register-link">
+                    <p>Don't have an Account? <a href="#" onclick="showForm('register'); return false;">Register</a></p>
+                </div>
+            </form>
         </div>
-        </form>
 
-         <div class="box1" id="register">
-            <form action="">
+        <div class="box" id="register">
+            <form action="#">
                 <h1>Register</h1>
                 <div class="input-box">
                     <span class="icon">
@@ -46,38 +50,44 @@
                 </div>
                 <div class="input-box">
                     <span class="icon">
-                        <ion-icon name="text"></ion-icon>
+                        <ion-icon name="person"></ion-icon>
                     </span>
-                    <input type="name" required>
-                    <label>user name</label>
+                    <input type="text" required>
+                    <label>Username</label>
                 </div>
-                  <div class="input-box">
+                <div class="input-box">
                     <span class="icon">
                         <ion-icon name="lock-closed"></ion-icon>
                     </span>
                     <input type="password" required>
                     <label>Password</label>
                 </div>
-                 <div class="input-box">
+                <div class="input-box">
                     <span class="icon">
                         <ion-icon name="lock-closed"></ion-icon>
                     </span>
                     <input type="password" required>
                     <label>Confirm Password</label>
                 </div>
-                 <select name="role" required>
-                        <option value="">--select role--</option>
-                        <option value=""><li>Admin</li></option>
-                        <option value=""><li>User</li></option>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="people"></ion-icon>
+                    </span>
+                    <select name="role" required>
+                        <option value="">-- Select Role --</option>
+                        <option value="admin">Admin</option>
+                        <option value="user">User</option>
                     </select>
+                    <label class="select-label">Role</label>
+                </div>
                 <button type="submit">Register</button>
-                <div class="register-link"><p>
-                    Already have an Account? <a href="#" onclick="showForm('login')">Login</a>
-                </p></div>
+                <div class="register-link">
+                    <p>Already have an Account? <a href="#" onclick="showForm('login'); return false;">Login</a></p>
+                </div>
+            </form>
         </div>
-        </form>
-
-    <script src="javas.js"></script>
-    </body>
     </section>
-</html>
+    
+    <script src="javas.js"></script>
+</body>
+                        </html>
